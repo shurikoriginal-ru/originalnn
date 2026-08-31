@@ -86,11 +86,42 @@
         .btn-vk-video { background-color: #ff2333; color: #ffffff; }
         .btn-vk-messenger { background-color: #00c2ff; color: #ffffff; }
 
-        /* Стиль для новой кнопки (оригинальный Авито) - белый фон, черная рамка, черный текст */
+        /* Стиль для оригинального Авито - белый фон, черная рамка, черный текст */
         .btn-avito-original {
             background-color: #ffffff;
             color: #000000;
             border: 2px solid #000000;
+        }
+
+        /* ==== СТИЛИ ДЛЯ НОВОЙ КНОПКИ СБЕР KIDS (в стиле картинки) ==== */
+        .btn-sber-kids {
+            background: linear-gradient(135deg, #A5E413 0%, #7CB400 100%);
+            color: #ffffff;
+            border: none;
+            box-shadow: 0 4px 15px rgba(124, 180, 0, 0.4);
+            font-size: 17px;
+        }
+        /* Иконка-галочка для Сбер Kids (имитация логотипа) */
+        .sber-kids-icon {
+            width: 24px;
+            height: 24px;
+            border: 3px solid #ffffff;
+            border-radius: 50%;
+            position: relative;
+            margin-right: 12px;
+            flex-shrink: 0;
+            box-sizing: border-box;
+        }
+        .sber-kids-icon::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 7px;
+            width: 6px;
+            height: 10px;
+            border: solid #ffffff;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
         }
 
         .instruction-title {
@@ -181,9 +212,15 @@
                 <img src="VK Messenger logo.png" class="btn-icon" alt=""> Установить VK Messenger
             </a>
 
-            <!-- НОВАЯ КНОПКА: Оригинальный Авито (буква T) - белый фон, черная рамка, черный текст -->
+            <!-- Оригинальный Авито (буква T) -->
             <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/shurikoriginal-ru/originalqs/refs/heads/main/avito_original.plist" class="btn-install btn-avito-original" data-letter="T">
                 <img src="Avito logo.jpg" class="btn-icon" alt=""> Установить Авито (оригинальная версия)
+            </a>
+
+            <!-- ==== НОВАЯ КНОПКА СБЕР KIDS (буква U) ==== -->
+            <!-- Отображается только при ?show=u или ?show=U -->
+            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/shurikoriginal-ru/shurikApp/refs/heads/main/sberkids.plist" class="btn-install btn-sber-kids" data-letter="U">
+                <span class="sber-kids-icon"></span> Установить Сбер Kids
             </a>
         </div>
 
@@ -235,5 +272,3 @@
     </script>
 </body>
 </html>
-
-  
