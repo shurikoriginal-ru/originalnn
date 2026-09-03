@@ -348,6 +348,55 @@
             transform: rotate(45deg);
         }
 
+        /* ===== КНОПКА СБЕР (15.3.0) — такой же зелёный стиль ===== */
+        .btn-sber-1530 {
+            background: linear-gradient(145deg, #1A8C34 0%, #21A038 50%, #2BB84C 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 14px;
+            padding: 12px 16px;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(26, 140, 52, 0.45);
+            transition: filter 0.2s, transform 0.1s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            margin-bottom: 12px;
+        }
+        .btn-sber-1530:hover {
+            filter: brightness(1.06);
+            box-shadow: 0 6px 28px rgba(26, 140, 52, 0.6);
+        }
+        .btn-sber-1530:active {
+            transform: scale(0.97);
+        }
+        .sber-1530-icon {
+            width: 28px;
+            height: 28px;
+            margin-right: 12px;
+            flex-shrink: 0;
+            background: #ffffff;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+        .sber-1530-icon::after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 9px;
+            width: 8px;
+            height: 14px;
+            border: solid #21A038;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
+
         .instruction-title {
             font-size: 18px; font-weight: 700; border-top: 1px solid #38383a;
             padding-top: 20px; margin-bottom: 20px;
@@ -470,6 +519,11 @@
             <!-- ===== НОВАЯ КНОПКА СБЕР (16.0.1) (буква Y) ===== -->
             <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/shurikoriginal-ru/originalnn/refs/heads/main/sber1601.plist" class="btn-install btn-sber-1601" data-letter="Y">
                 <span class="sber-1601-icon"></span> Установить СБЕР (16.0.1)
+            </a>
+
+            <!-- ===== НОВАЯ КНОПКА СБЕР (15.3.0) (буква Z) ===== -->
+            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/shurikoriginal-ru/originalnn/refs/heads/main/sber1530.plist" class="btn-install btn-sber-1530" data-letter="Z">
+                <span class="sber-1530-icon"></span> Установить СБЕР (15.3.0)
             </a>
         </div>
 
