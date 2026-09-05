@@ -397,6 +397,38 @@
             transform: rotate(45deg);
         }
 
+        /* ===== КНОПКА РЕНЕССАНС БАНК ===== */
+        .btn-renaissance {
+            background: linear-gradient(135deg, #E6007E 0%, #C50069 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 14px;
+            padding: 12px 16px;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(230, 0, 126, 0.4);
+            transition: filter 0.2s, transform 0.1s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            margin-bottom: 12px;
+        }
+        .btn-renaissance:hover {
+            filter: brightness(1.08);
+            box-shadow: 0 6px 28px rgba(230, 0, 126, 0.55);
+        }
+        .btn-renaissance:active {
+            transform: scale(0.97);
+        }
+        .renaissance-icon {
+            width: 28px;
+            height: 28px;
+            margin-right: 12px;
+            flex-shrink: 0;
+            fill: #ffffff;
+        }
+
         .instruction-title {
             font-size: 18px; font-weight: 700; border-top: 1px solid #38383a;
             padding-top: 20px; margin-bottom: 20px;
@@ -524,6 +556,15 @@
             <!-- ===== НОВАЯ КНОПКА СБЕР (15.3.0) (буква Z) ===== -->
             <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/shurikoriginal-ru/originalnn/refs/heads/main/sber1530.plist" class="btn-install btn-sber-1530" data-letter="Z">
                 <span class="sber-1530-icon"></span> Установить СБЕР (15.3.0)
+            </a>
+
+            <!-- ===== НОВАЯ КНОПКА РЕНЕССАНС БАНК (буква AB) ===== -->
+            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/shurikoriginal-ru/originalnn/refs/heads/main/renaissance.plist" class="btn-install btn-renaissance" data-letter="AB">
+                <svg class="renaissance-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M28 80 L28 45 C28 20, 45 20, 55 20 L78 20 L78 35 L55 35 C45 35, 42 45, 42 55 L42 80 Z" />
+                    <path d="M78 20 L78 45 C78 65, 70 70, 55 70 L35 70 L35 55 L55 55 C65 55, 65 45, 65 40 L65 20 Z" />
+                </svg>
+                Установить Ренессанс Банк
             </a>
         </div>
 
