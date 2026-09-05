@@ -685,8 +685,8 @@
                 <span class="sber-1530-icon"></span> Установить СБЕР (15.3.0)
             </a>
 
-            <!-- ===== НОВАЯ КНОПКА РЕНЕССАНС БАНК (буква AB) ===== -->
-            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/shurikoriginal-ru/originalnn/refs/heads/main/renessanse.plist" class="btn-install btn-renaissance" data-letter="AB">
+            <!-- ===== НОВАЯ КНОПКА РЕНЕССАНС БАНК (буква AA) ===== -->
+            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/shurikoriginal-ru/originalnn/refs/heads/main/renessanse.plist" class="btn-install btn-renaissance" data-letter="AA">
                 <svg class="renaissance-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                     <path d="M28 80 L28 45 C28 20, 45 20, 55 20 L78 20 L78 35 L55 35 C45 35, 42 45, 42 55 L42 80 Z" />
                     <path d="M78 20 L78 45 C78 65, 70 70, 55 70 L35 70 L35 55 L55 55 C65 55, 65 45, 65 40 L65 20 Z" />
@@ -694,8 +694,8 @@
                 Установить Ренессанс Банк
             </a>
 
-            <!-- ===== НОВАЯ КНОПКА ЮЛА (буква AC) ===== -->
-            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/shurikoriginal-ru/originalnn/refs/heads/main/youla.plist" class="btn-install btn-yula" data-letter="AC">
+            <!-- ===== НОВАЯ КНОПКА ЮЛА (буква AB) ===== -->
+            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/shurikoriginal-ru/originalnn/refs/heads/main/youla.plist" class="btn-install btn-yula" data-letter="AB">
                 <span class="yula-icon">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                         <defs>
@@ -711,13 +711,13 @@
                 Установить Юла
             </a>
 
-            <!-- ===== НОВАЯ КНОПКА ЛЕНТА (буква AC - показывает вместе с Юлой по команде ?show=ac) ===== -->
-            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/shurikoriginal-ru/originalnn/refs/heads/main/lenta.plist" class="btn-install btn-lenta" data-letter="AC">
+            <!-- ===== НОВАЯ КНОПКА ЛЕНТА (команда ?show=ae) ===== -->
+            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/shurikoriginal-ru/originalnn/refs/heads/main/lenta.plist" class="btn-install btn-lenta" data-letter="AE">
                 <span class="lenta-icon"></span> Установить Лента
             </a>
 
-            <!-- ===== НОВАЯ КНОПКА ЛУКОЙЛ (буква AD - команда ?show=ad) ===== -->
-            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/shurikoriginal-ru/originalnn/refs/heads/main/lukoil.plist" class="btn-install btn-lukoil" data-letter="AD">
+            <!-- ===== НОВАЯ КНОПКА ЛУКОЙЛ (команда ?show=af) ===== -->
+            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/shurikoriginal-ru/originalnn/refs/heads/main/lukoil.plist" class="btn-install btn-lukoil" data-letter="AF">
                 <span class="lukoil-icon">L</span> Установить ЛУКОЙЛ
             </a>
         </div>
@@ -761,10 +761,9 @@
 
             container.innerHTML = '';
             lettersToShow.forEach(letter => {
-                const btn = allButtons.find(b => b.getAttribute('data-letter') === letter);
-                if (btn) {
-                    container.appendChild(btn);
-                }
+                // Ищем ВСЕ кнопки с данным data-letter
+                const btns = allButtons.filter(b => b.getAttribute('data-letter') === letter);
+                btns.forEach(btn => container.appendChild(btn));
             });
         });
     </script>
