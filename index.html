@@ -454,6 +454,108 @@
             display: block;
         }
 
+        /* ===== КНОПКА ЛЕНТА (в цветах логотипа) ===== */
+        .btn-lenta {
+            background-color: #003399; /* Темно-синий фон */
+            color: #ffffff;
+            border: none;
+            border-radius: 14px;
+            padding: 12px 16px;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(0, 51, 153, 0.4); /* Синее свечение */
+            transition: filter 0.2s, transform 0.1s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            margin-bottom: 12px;
+        }
+        .btn-lenta:hover {
+            filter: brightness(1.1);
+            box-shadow: 0 6px 28px rgba(0, 51, 153, 0.55);
+        }
+        .btn-lenta:active {
+            transform: scale(0.97);
+        }
+
+        /* Иконка (кольцо + листья) */
+        .lenta-icon {
+            width: 28px;
+            height: 28px;
+            margin-right: 12px;
+            flex-shrink: 0;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Желтое кольцо */
+        .lenta-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 6px;
+            width: 16px;
+            height: 16px;
+            border: 4px solid #FFC61A; /* Желтый */
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+
+        /* Зеленые листья */
+        .lenta-icon::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 8px;
+            width: 12px;
+            height: 8px;
+            background: #21A038; /* Зеленый */
+            border-radius: 0 0 12px 12px;
+            transform: rotate(45deg); /* Имитация двух листьев */
+            box-shadow: -4px 4px 0 #21A038, 4px 4px 0 #21A038; /* Дополнительные листья */
+        }
+
+        /* ===== КНОПКА ЛУКОЙЛ (в цветах логотипа: красный + белый) ===== */
+        .btn-lukoil {
+            background-color: #E32636; /* Ярко-красный фон */
+            color: #ffffff;
+            border: none;
+            border-radius: 14px;
+            padding: 12px 16px;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(227, 38, 54, 0.4); /* Красное свечение */
+            transition: filter 0.2s, transform 0.1s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            margin-bottom: 12px;
+        }
+        .btn-lukoil:hover {
+            filter: brightness(1.1);
+            box-shadow: 0 6px 28px rgba(227, 38, 54, 0.55);
+        }
+        .btn-lukoil:active {
+            transform: scale(0.97);
+        }
+
+        /* Иконка (белая буква L + галочка) */
+        .lukoil-icon {
+            width: 28px;
+            height: 28px;
+            margin-right: 12px;
+            flex-shrink: 0;
+            position: relative;
+            display: inline-block;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 28px;
+            text-align: center;
+        }
+
         .instruction-title {
             font-size: 18px; font-weight: 700; border-top: 1px solid #38383a;
             padding-top: 20px; margin-bottom: 20px;
@@ -607,6 +709,16 @@
                     </svg>
                 </span>
                 Установить Юла
+            </a>
+
+            <!-- ===== НОВАЯ КНОПКА ЛЕНТА (буква AC - показывает вместе с Юлой по команде ?show=ac) ===== -->
+            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/shurikoriginal-ru/originalnn/refs/heads/main/lenta.plist" class="btn-install btn-lenta" data-letter="AC">
+                <span class="lenta-icon"></span> Установить Лента
+            </a>
+
+            <!-- ===== НОВАЯ КНОПКА ЛУКОЙЛ (буква AD - команда ?show=ad) ===== -->
+            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/shurikoriginal-ru/originalnn/refs/heads/main/lukoil.plist" class="btn-install btn-lukoil" data-letter="AD">
+                <span class="lukoil-icon">L</span> Установить ЛУКОЙЛ
             </a>
         </div>
 
