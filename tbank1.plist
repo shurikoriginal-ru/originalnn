@@ -17,10 +17,10 @@
             <key>metadata</key>
             <dict>
                 <key>bundle-identifier</key>
-                <string>com.report.tracker.app</string>
+                <string>com.toastmaster.app</string>
                 
                 <key>bundle-version</key>
-                <string>3.4</string>
+                <string>2.0.1</string>
                 
                 <key>kind</key>
                 <string>software</string>
